@@ -15,7 +15,7 @@ spec:
       containers:
       - name: my-python-app
         image: wzacr01/mypython-app
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5000
       imagePullSecrets:
