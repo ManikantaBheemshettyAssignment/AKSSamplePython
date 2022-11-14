@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-pythonapp-deployment
+  name: my-python-deployment
 spec:
   replicas: 1
   selector:
@@ -13,13 +13,13 @@ spec:
         app: python-app
     spec:
       containers:
-      - name: my-python-app01
-        image: wzacr01/mypython-app01
+      - name: my-python-app02
+        image: wzacr01/mypython-app02
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
       imagePullSecrets:
-      - name: sampleacrsecret
+      - name: sampleacrsecret1
 # service type loadbalancer       
 ---
 apiVersion: v1
