@@ -19,7 +19,7 @@ spec:
         ports:
         - containerPort: 5000
       imagePullSecrets:
-      - name: sampleacrsecret
+      - name: sampleacrsecret1
 # service type loadbalancer       
 ---
 apiVersion: v1
