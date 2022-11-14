@@ -6,29 +6,29 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: python-app
+      app: python-app1
   template:
     metadata:
       labels:
-        app: python-app
+        app: python-app1
     spec:
       containers:
-      - name: my-python-app
+      - name: my-python-apps
         image: wzacr01/mypython-app
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5000
       imagePullSecrets:
-      - name: sampleacrsecret1
+      - name: sampleacrsecret
 # service type loadbalancer       
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: python-app-svc
+  name: python-app-svcs
 spec:
   selector:
-    app: python-app
+    app: python-app1
   ports:
     - protocol: TCP
       port: 5000
