@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-python-deployment
+  name: my-pythonapp-deployment
 spec:
   replicas: 1
   selector:
@@ -25,7 +25,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: python-app-svc
+  name: python-app-service
 spec:
   selector:
     app: python-app
